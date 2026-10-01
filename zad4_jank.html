@@ -1,0 +1,85 @@
+<!DOCTYPE html>   
+<html lang="pl"> 
+<head> 
+<title>Moja strona WWW</title> 
+<script language="JavaScript">
+function okno_zamknij()  
+            { 
+            window.close() 
+            } 
+          </script>
+</head> 
+
+<body> 
+<p><b>1)kiedy powstał JavaScript (podaj datę).</p></b>
+<p>w 1995 roku</p><br>
+<p><b>2)dlaczego jest to język skryptowy </p></b>
+<p>Nie musi zostać skompilowany do kodu maszynowego, aby można było zobaczyć efekty jego działania.</p><br>
+<p><b>3)gdzie jest wykonywany JS   (klient lub serwer) </p></b>
+<p>Ze względów bezpieczeństwa JavaScript ma znacznie ograniczone uprawnienia dostępu do zasobów 
+komputera, przy użyciu którego przeglądana jest dana strona, a wszelkie odwołania do funkcji i 
+obiektów wykonywane są w trakcie wykonywania programu.</p><br>
+<p><b>4)dlaczego jest JS to bezpieczne narzędzie </p></b>
+<p>został zaprojektowany z myślą o uruchamianiu obcego, nieznanego kodu ze stron internetowych w taki sposób, aby nie mógł on zaszkodzić komputerowi użytkownika</p><br>
+<p><b>5)czy jest to język obiektowy , jeśli tak to dlaczego.</p></b>
+<p>Javascript jest językiem programowania obiektowego ponieważ wykorzystuje definicje obiektów, 
+metod, zdarzeń, które mogą być zastosowane do opisu właściwości obiektów.</p><br>
+<p><b>6)wymień zalety  JS: </p></b>
+<li>Największą zaletą JavaScriptu jest niewątpliwie jego prostota. Język ten uważa się więc za 
+relatywnie łatwy do opanowania i rzeczywiście – nic nie stoi na przeszkodzie, aby zacząć używać go 
+już po kilku minutach od rozpoczęcia nauki.
+<li>Ponieważ jest to obecnie najbardziej rozpowszechniony język skryptowy, w Internecie można
+znaleźć miliony praktycznych przykładów – witryn wykorzystujących różnorodne funkcje JavaScriptu.
+<li>O olbrzymiej popularności języka zadecydowały z pewnością jego uniwersalność oraz fakt, iż
+pozwala on na odciążenie serwerów i ograniczenie ilości zbędnych danych przesyłanych pomiędzy
+nimi a przeglądarką klienta.
+
+<p><b>7)Framework to:</p></b>
+<p>gotowy szkielet, zestaw narzędzi i reguł, które pomagają programistom szybciej budować strony i aplikacje internetowe, zamiast pisać wszystko od zera</p><br>
+
+<p><b>8)Do aplikacji mobilnych można użyć Framework</p></b>
+<p>Funkcje i zastosowania JavaScript sprawiają, że jest to potężne narzędzie do tworzenia aplikacji
+mobilnych.</p><br>
+
+<p><b>9)Aplikacje responsywne to:</p></b>
+<p>Responsywność JavaScript udostępnia metody, których można użyć w aplikacji, aby uzyskać
+bieżący rozmiar ekranu i wykorzystać wynik do wykonania działań w oparciu o ten rozmiar.</p><br>
+
+<p><b>10)Przepisz linie kody pod nimi wytłumaczenie jak działa ten fragment kodu </p></b>
+<p>
+	<code>
+        &lt;input type="button" name="przycisk"
+        value="Nowa Strona" onclick="WinOpen('')"&gt;
+    </code><br>
+</p>
+<p>Jest to przycisk HTML. Po jego kliknięciu wykonywana jest funkcja JavaScript podana w atrybucie onclick.</p><br>
+
+
+
+<p><b>11) Przepisz linię kodu i wytłumacz, jak działa:</p></b>
+ <p>
+    <code>
+		window.open("obraz.html","okienko",
+		"toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");
+    </code>
+</p>
+<p>Instrukcja window.open() otwiera nowe okno przeglądarki. Pierwszy parametr określa otwieraną stronę, drugi nazwę okna, a kolejne parametry określają wygląd, rozmiar i położenie okna.</p>
+
+<p>
+    <b>toolbar=no</b> – ukrywa pasek narzędzi.<br>
+    <b>directories=no</b> – ukrywa elementy katalogów.<br>
+    <b>menubar=no</b> – ukrywa pasek menu.<br>
+    <b>height=280</b> – wysokość okna.<br>
+    <b>width=160</b> – szerokość okna.<br>
+    <b>top=200</b> – odległość od górnej części ekranu.<br>
+    <b>left=200</b> – odległość od lewej części ekranu.
+</p><br>
+
+<p><b>12) Opisz instrukcję window.close()</p></b>
+<p>Instrukcja window.close() służy do zamknięcia okna przeglądarki lub okna otwartego przez JavaScript.</p><br>
+
+
+<form><input type="button" value="zamknij okno" onclick="okno_zamknij()"/> </form>
+
+</body> 
+</html> 

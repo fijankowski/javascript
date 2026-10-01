@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 5 - Jankowski</title>
+</head>
+<body>
+
+<h1 style="color: red;">Filip Jankowski mój numer w dzienniku 7,czyli mam układ [(7) mod 4 = 3] układ 3</h1>
+<div>
+    <button onclick="WinOpen_jankowski_1()">grafika1</button>
+    <button onclick="WinOpen_jankowski_2()">grafika2</button>
+    <button onclick="WinOpen_jankowski_3()">grafika3</button>
+    <button onclick="WinOpen_jankowski_4()">grafika4</button>
+</div>
+
+<br><br>
+<button onclick="window.close()">zamknij okno</button>
+
+<script>
+
+var okno1, okno2, okno3, okno4;
+
+function WinOpen_jankowski_1() {
+    okno1 = window.open('', 'okno1', 'width=180,height=270,left=180,top=500');
+    okno1.document.write(
+        '<html><head><title>grafika1</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://media.istockphoto.com/id/1750788378/pl/zdj%C4%99cie/outdoor-senior-fitness-kobieta-styl-%C5%BCycia-aktywny-sport-%C4%87wiczenia-zdrowy-dopasowany-starszy.jpg?s=2048x2048&w=is&k=20&c=-xvOjh7Pc968Mc5yiAg5X0u0x6NxsWG8lfG7RQVJ-v8=" width="150" alt="grafika1"><br>' +
+        '<p style="color:pink;font-weight:bold;">IDZIE BABA DO LEKARZA</p>' +
+        '<button onclick="window.opener.okno_zamknij_jankowski_1()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_jankowski_1() {
+    if (okno1 && !okno1.closed) okno1.close();
+}
+
+function WinOpen_jankowski_2() {
+    okno2 = window.open('', 'okno2', 'width=180,height=270,left=380,top=350');
+    okno2.document.write(
+        '<html><head><title>grafika2</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://media.istockphoto.com/id/1861987830/pl/zdj%C4%99cie/pi%C4%99kna-lekarka-rozmawiaj%C4%85ca-podczas-wyja%C5%9Bniania-pacjentowi-leczenia-za-pomoc%C4%85-tabletu.jpg?s=2048x2048&w=is&k=20&c=7w9ZSk-3-ew24ADaEhTr4avKiy1eo1nhHTf0VWGeOD4=" width="150" alt="grafika2"><br>' +
+        '<p style="color:purple;font-weight:bold;">A LEKARZ TEŻ BABA</p>' +
+        '<button onclick="window.opener.okno_zamknij_jankowski_2()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_jankowski_2() {
+    if (okno2 && !okno2.closed) okno2.close();
+}
+
+function WinOpen_jankowski_3() {
+    okno3 = window.open('', 'okno3', 'width=180,height=270,left=580,top=200');
+    okno3.document.write(
+        '<html><head><title>grafika3</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://static5.depositphotos.com/1037987/477/i/950/depositphotos_4779640-stock-photo-woman-lying-hospital-bed.jpg" width="150" alt="grafika3"><br>' +
+        '<p style="color:red;font-weight:bold;">BABA MA RAKA</p>' +
+        '<button onclick="window.opener.okno_zamknij_jankowski_3()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_jankowski_3() {
+    if (okno3 && !okno3.closed) okno3.close();
+}
+
+function WinOpen_jankowski_4() {
+    okno4 = window.open('', 'okno4', 'width=180,height=270,left=780,top=50');
+    okno4.document.write(
+        '<html><head><title>grafika4</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://as2.ftcdn.net/v2/jpg/03/17/10/41/1000_F_317104103_yR0c7K1ayR50L5E0Ay9NcWGRw0jYGzE5.jpg" width="150" alt="grafika4"><br>' +
+        '<p style="color:green;font-weight:bold;">BABIE ZOSTAŁ MIESIĄĆ ŻYCIA</p>' +
+        '<button onclick="window.opener.okno_zamknij_jankowski_4()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_jankowski_4() {
+    if (okno4 && !okno4.closed) okno4.close();
+}
+
+</script>
+
+</body>
+</html>
