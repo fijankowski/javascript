@@ -1,0 +1,39 @@
+<html>
+ <body>
+ <textarea cols="90" rows="38">
+// Filip Jankowski 3F 15.10.2026
+// Zadanie 12
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ile sekund</title>
+    <script type="text/javascript">
+        function ile_sekund_jank() {
+            var d1 = parseFloat(document.getElementById("D1_jan").value);
+            var g1 = parseFloat(document.getElementById("G1_jan").value);
+            var d2 = parseFloat(document.getElementById("D2_jan").value);
+            var g2 = parseFloat(document.getElementById("G2_jan").value);
+            
+            var ilosc_sekund = ((d1 - d2) * 24 * 60 * 60) + ((g1 - g2) * 60 * 60);
+            
+            document.getElementById("wynik").innerHTML = "ilość sekund= " + ilosc_sekund + " sekund";
+        }
+    </script>
+</head>
+<body>
+    <h2>Temat: Ile sekund</h2>
+    <form>
+        Podaj dzień 1 (D1_jan): <input type="text" id="D1_jan" value="30"><br><br>
+        Podaj godzinę 1 (G1_jan): <input type="text" id="G1_jan" value="4"><br><br>
+        Podaj dzień 2 (D2_jan): <input type="text" id="D2_jan" value="28"><br><br>
+        Podaj godzinę 2 (G2_jan): <input type="text" id="G2_jan" value="22"><br><br>
+        
+        <input type="button" value="Oblicz sekundy" onclick="ile_sekund_jank()">
+    </form>
+    <div id="wynik" style="color: green; font-size: 45px; margin-top: 20px;"></div>
+</body>
+</html>
+</textarea>
+ </body>
+</html>

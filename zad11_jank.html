@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ile sekund</title>
+    <script type="text/javascript">
+        function ile_sekund_jank() {
+            var d1 = parseFloat(document.getElementById("D1_jan").value);
+            var d2 = parseFloat(document.getElementById("D2_jan").value);
+            var roznica_dni = d1 - d2;
+            var ilosc_sekund = roznica_dni * 24 * 60 * 60;
+            document.getElementById("wynik").innerHTML = "ilość sekund= " + ilosc_sekund + " sekund";
+        }
+    </script>
+</head>
+<body>
+    <h2>Temat: Ile sekund.</h2>
+    <form>
+        Podaj dzień 1 (D1_jan): <input type="text" id="D1_jan" value="30"><br><br>
+        Podaj dzień 2 (D2_jan): <input type="text" id="D2_jan" value="28"><br><br>
+        <input type="button" value="Oblicz sekundy" onclick="ile_sekund_jank()">
+    </form>
+    <div id="wynik" style="color: green; font-size: 45px; margin-top: 20px;"></div>
+</body>
+</html>
