@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Obliczanie długości drabiny i kąta</title>
+</head>
+<body>
+
+<h2>Obliczanie długości drabiny i kąta</h2>
+
+<form>
+    Podaj D (wysokość): 
+    <input type="number" id="d" step="any"><br><br>
+
+    Podaj X (odległość): 
+    <input type="number" id="x" step="any"><br><br>
+
+    <input type="button" value="Oblicz" onclick="oblicz()"><br><br>
+
+    Drabina:
+    <input type="text" id="drabina" readonly><br><br>
+
+    Alfa:
+    <input type="text" id="alfa" readonly>
+</form>
+
+<script>
+
+// Funkcja obliczająca długość drabiny
+function dlugosc(d, x) {
+    return Math.sqrt(d*d + x*x);
+}
+
+// Funkcja obliczająca kąt nachylenia
+function kat(d, x) {
+    return Math.atan(d/x) * 180 / Math.PI;
+}
+
+// Funkcja główna
+function oblicz() {
+
+    let d = parseFloat(document.getElementById("d").value);
+    let x = parseFloat(document.getElementById("x").value);
+
+    if (isNaN(d) || isNaN(x) || d <= 0 || x <= 0) {
+        alert("Podaj prawidłowe wartości D i X!");
+        return;
+    }
+
+    let wynik1 = dlugosc(d, x);
+    let wynik2 = kat(d, x);
+
+    document.getElementById("drabina").value = wynik1.toFixed(2);
+    document.getElementById("alfa").value = wynik2.toFixed(2);
+}
+
+</script>
+
+</body>
+</html>

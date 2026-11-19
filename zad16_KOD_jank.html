@@ -1,0 +1,34 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+// Filip Jankowski 3F
+// Zadanie 16
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Sterowanie wydrukami</title>
+</head>
+<body>
+  <script>
+    let A_jan = Number(prompt("Podaj pierwszą liczbę"));
+    let B_jan = Number(prompt("Podaj drugą liczbę"));
+
+    let skladnik1 = Math.pow(A_jan, 3);
+    let skladnik2 = 3 * Math.pow(A_jan, 2) * B_jan;
+    let skladnik3 = 3 * A_jan * Math.pow(B_jan, 2);
+    let skladnik4 = Math.pow(B_jan, 3);
+    let wynik = skladnik1 + skladnik2 + skladnik3 + skladnik4;
+
+    document.write("<div style='color: navy; font-size: 2vw; white-space: nowrap;'>");
+    document.write("wczytane liczby:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A=" + A_jan + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B=" + B_jan + "<br><br>");
+    document.write("(" + A_jan + " + " + B_jan + ")^3 = " + A_jan + "^3 + 3*(" + A_jan + "^2)*(" + B_jan + ") + 3*(" + A_jan + ")*(" + B_jan + "^2) + " + B_jan + "^3 = ");
+    document.write(skladnik1 + " + " + skladnik2 + " + " + skladnik3 + " + " + skladnik4 + " = " + wynik);
+    document.write("</div>");
+  </script>
+</body>
+</html>
+
+</textarea>
+ </body>
+</html>

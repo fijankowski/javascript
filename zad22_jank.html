@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pole i obwód prostokąta</title>
+</head>
+<body>
+
+<h2>Obliczanie pola i obwodu prostokąta</h2>
+
+<form>
+    Podaj bok a:
+    <input type="number" id="a_dana_jan" step="any"><br><br>
+
+    Podaj bok b:
+    <input type="number" id="b_dana_jan" step="any"><br><br>
+
+    <input type="button" value="Oblicz" onclick="oblicz_jan()"><br><br>
+
+    Pole:
+    <input type="text" id="wyprowadz_pole_jan" readonly><br><br>
+
+    Obwód:
+    <input type="text" id="wyprowadz_obwod_jan" readonly>
+</form>
+
+<script>
+
+// Funkcja obliczająca pole prostokąta
+function pole_jan(a_jan, b_jan) {
+    return a_jan * b_jan;
+}
+
+// Funkcja obliczająca obwód prostokąta
+function obwod_jan(a_jan, b_jan) {
+    return 2 * (a_jan + b_jan);
+}
+
+// Funkcja główna
+function oblicz_jan() {
+
+    let a_dana_jan = parseFloat(document.getElementById("a_dana_jan").value);
+    let b_dana_jan = parseFloat(document.getElementById("b_dana_jan").value);
+
+    if (isNaN(a_dana_jan) || isNaN(b_dana_jan) ||
+        a_dana_jan <= 0 || b_dana_jan <= 0) {
+        alert("Podaj prawidłowe długości boków!");
+        return;
+    }
+
+    let wynik_pole_jan = pole_jan(a_dana_jan, b_dana_jan);
+    let wynik_obwod_jan = obwod_jan(a_dana_jan, b_dana_jan);
+
+    document.getElementById("wyprowadz_pole_jan").value = wynik_pole_jan.toFixed(2);
+
+    document.getElementById("wyprowadz_obwod_jan").value = wynik_obwod_jan.toFixed(2);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Obliczanie długości boków trójkąta</title>
+</head>
+<body>
+
+<h2>Obliczanie długości boków trójkąta</h2>
+
+<h3>Podaj współrzędne punktów:</h3>
+
+Punkt A:
+X:
+<input type="number" id="xa_jan" step="any">
+Y:
+<input type="number" id="ya_jan" step="any">
+<br><br>
+
+Punkt B:
+X:
+<input type="number" id="xb_jan" step="any">
+Y:
+<input type="number" id="yb_jan" step="any">
+<br><br>
+
+Punkt C:
+X:
+<input type="number" id="xc_jan" step="any">
+Y:
+<input type="number" id="yc_jan" step="any">
+<br><br>
+
+<input type="button" value="Oblicz" onclick="oblicz_jan()">
+
+<h3>Wyniki:</h3>
+
+Długość boku AB:
+<input type="text" id="wynik_AB_jan" readonly>
+<br><br>
+
+Długość boku BC:
+<input type="text" id="wynik_BC_jan" readonly>
+<br><br>
+
+Długość boku AC:
+<input type="text" id="wynik_AC_jan" readonly>
+
+<script>
+
+// Zmienne współrzędnych punktów
+var xa_jan, ya_jan;
+var xb_jan, yb_jan;
+var xc_jan, yc_jan;
+
+// Funkcja obliczająca długość boku AB
+function AB_kry() {
+    return Math.sqrt(Math.pow(xa_jan-xb_jan, 2) +
+                     Math.pow(ya_jan-yb_jan, 2));
+}
+
+// Funkcja obliczająca długość boku BC
+function BC_kry() {
+    return Math.sqrt(Math.pow(xb_jan-xc_jan, 2) +
+                     Math.pow(yb_jan-yc_jan, 2));
+}
+
+// Funkcja obliczająca długość boku AC
+function AC_kry() {
+    return Math.sqrt(Math.pow(xa_jan-xc_jan, 2) +
+                     Math.pow(ya_jan-yc_jan, 2));
+}
+
+// Funkcja główna
+function oblicz_jan() {
+
+    xa_jan = parseFloat(document.getElementById("xa_jan").value);
+    ya_jan = parseFloat(document.getElementById("ya_jan").value);
+
+    xb_jan = parseFloat(document.getElementById("xb_jan").value);
+    yb_jan = parseFloat(document.getElementById("yb_jan").value);
+
+    xc_jan = parseFloat(document.getElementById("xc_jan").value);
+    yc_jan = parseFloat(document.getElementById("yc_jan").value);
+
+    // Sprawdzenie poprawności danych
+    if (isNaN(xa_jan) || isNaN(ya_jan) ||
+        isNaN(xb_jan) || isNaN(yb_jan) ||
+        isNaN(xc_jan) || isNaN(yc_jan)) {
+
+        alert("Wprowadź wszystkie współrzędne punktów!");
+        return;
+    }
+
+    // Obliczanie długości boków
+    var wynik_AB_jan = AB_kry();
+    var wynik_BC_jan = BC_kry();
+    var wynik_AC_jan = AC_kry();
+
+    // Wyświetlanie wyników
+    document.getElementById("wynik_AB_jan").value =
+        wynik_AB_jan.toFixed(2);
+
+    document.getElementById("wynik_BC_jan").value =
+        wynik_BC_jan.toFixed(2);
+
+    document.getElementById("wynik_AC_jan").value =
+        wynik_AC_jan.toFixed(2);
+}
+
+</script>
+
+</body>
+</html>

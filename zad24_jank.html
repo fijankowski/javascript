@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Obliczenia</title>
+</head>
+<body>
+  <script>
+    let x1_jan = Number(prompt("Podaj x1:"));
+    let x2_jan = Number(prompt("Podaj x2:"));
+    let imie = prompt("Podaj imię:");
+    let liczbaLiter = imie.length;
+
+    let y1 = 3 * Math.pow(x1_jan, liczbaLiter / (liczbaLiter + 2));
+    let rad = x1_jan * Math.PI / 180;
+    let y2 = 2 * Math.cos(rad) + 3 * Math.sin(rad);
+    let y3 = Math.cbrt(Math.pow(x1_jan, 5) + 2 * Math.pow(x2_jan, 4)) * Math.abs(x1_jan - x2_jan);
+
+    document.write("x1 = " + x1_jan + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2 = " + x2_jan + "<br>");
+    document.write("x1 = " + x1_jan + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1 = " + rad.toFixed(2) + "<br>");
+    document.write("y1 = " + y1.toFixed(2) + "<br>");
+    document.write("y2 = " + y2.toFixed(2) + "<br>");
+    document.write("y3 = " + y3.toFixed(2));
+  </script>
+</body>
+</html>
